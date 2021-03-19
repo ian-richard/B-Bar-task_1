@@ -6,7 +6,7 @@ import UserOutput from './UserOutput/UserOutput';
 
 class App extends Component {
   state = {
-    username: 'supermax'
+    username: 'J.Smithy'
   }
 
   usernameChangedHandler = (event) => {
@@ -29,12 +29,13 @@ class App extends Component {
           <li>Add two-way-binding to your input (in UserInput) to also display the starting username</li>
           <li>Add styling of your choice to your components/ elements in the components - both with inline styles and stylesheets</li>
         </ol>
+        <h4>Enter your Username here:</h4>
         <UserInput 
           changed={this.usernameChangedHandler} 
           currentName={this.state.username} />
         <UserOutput userName={this.state.username} />
         <UserOutput userName={this.state.username} />
-        <UserOutput userName="Max" />
+        <UserOutput userName={this.state.username} />
       </div>
     );
   }
